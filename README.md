@@ -137,6 +137,11 @@ X, y = digits.data, digits.target
 
 # Construindo o classificador
 clf = RandomForestClassifier(n_estimators = 20)
+```
+### Executando Randomized Search
+
+Usando  ***sp_randint*** para escolher os parametros de forma random
+```sh
 
 # Randomized Search
 
