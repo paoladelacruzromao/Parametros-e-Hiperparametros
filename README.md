@@ -20,7 +20,7 @@ BaggingClassifier(base_estimator=estim_base, bootstrap=True, bootstrap_features=
 ## Extremely Randomized Forest
 
 Modelo padrão, com hiperparâmetros escolhidos manualmente.
-
+```sh
 # Imports
 import pandas as pd
 import numpy as np
@@ -70,7 +70,7 @@ print (confusionMatrix)
 
 # Acurácia
 print("Acurácia em Teste:", accuracy_score(y_test, y_pred))
-
+```
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Otimização dos Hiperparâmetros com Randomized Search
@@ -78,7 +78,7 @@ print("Acurácia em Teste:", accuracy_score(y_test, y_pred))
 http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html
 
 O Randomized Search gera amostras dos parâmetros dos algoritmos a partir de uma distribuição randômica uniforme para um número fixo de interações. Um modelo é construído e testado para cada combinação de parâmetros.
-
+```sh
 # Import
 from sklearn.model_selection import RandomizedSearchCV
 # Definição dos parâmetros
@@ -113,7 +113,7 @@ print(accuracy)
 
 # Obtendo o grid com todas as combinações de parâmetros
 rsearch.cv_results_
-
+```
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Grid Search x Randomized Search para Estimação dos Hiperparâmetros
@@ -122,7 +122,7 @@ http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSea
 http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html
 
 O Grid Search realiza metodicamente combinações entre todos os parâmetros do algoritmo, criando um grid.
-
+```sh
 import numpy as np
 from time import time
 from scipy.stats import randint as sp_randint
@@ -180,4 +180,4 @@ print("GridSearchCV executou em %.2f segundos para todas as combinações de can
       % (time() - start))
 grid_search.cv_results_
 
-
+```
