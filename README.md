@@ -161,7 +161,10 @@ print("RandomizedSearchCV executou em %.2f segundos para %d candidatos a parâme
 
 # Imprime as combinações dos parâmetros e suas respectivas médias de acurácia
 random_search.cv_results_
+```
+### Executando Grid Search
 
+```sh
 # Grid Search
 
 # Usando um grid completo de todos os parâmetros
@@ -181,3 +184,4 @@ print("GridSearchCV executou em %.2f segundos para todas as combinações de can
 grid_search.cv_results_
 
 ```
+### FIM
